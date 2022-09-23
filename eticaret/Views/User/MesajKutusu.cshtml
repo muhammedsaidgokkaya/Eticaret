@@ -1,0 +1,71 @@
+﻿@using EntityLayer.Concrete
+@model List<UserMesaj>
+
+@{
+    ViewData["Title"] = "MesajKutusu";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<div>
+    <section class="body">
+        <!-- start: header -->
+        <!-- end: header -->
+        <div>
+            <!-- start: sidebar -->
+            <!-- end: sidebar -->
+            <section role="main" class="content-body content-body-modern mt-0">
+                <form class="ecommerce-form action-buttons-fixed" action="#" method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col">
+                            <section class="card card-modern card-big-info">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-lg-12-9 col-xl-13-7">
+                                            <div class="row">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <div class="form-group row align-items-center mb-3">
+                                                            <label class="col-lg-5 col-xl-3 control-label text-lg-end mb-0">Başlık</label>
+                                                            <div class="col-lg-7 col-xl-6">
+                                                                <input class="form-control form-control-modern" name="Baslik" value="" required>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row align-items-center mb-3">
+                                                            <label class="col-lg-5 col-xl-3 control-label text-lg-end mb-0">Konu</label>
+                                                            <div class="col-lg-7 col-xl-6">
+                                                                <input class="form-control form-control-modern" name="Konu" rows="4" required>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row align-items-center mb-3">
+                                                            <label class="col-lg-5 col-xl-3 control-label text-lg-end mb-0">Metin</label>
+                                                            <div class="col-lg-7 col-xl-6">
+                                                                <input class="form-control form-control-modern" name="Description" rows="4" required>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row align-items-center mb-3">
+                                                            <label class="col-lg-5 col-xl-3 control-label text-lg-end mb-0">E-Posta</label>
+                                                            <div class="col-lg-7 col-xl-6">
+                                                                <input class="form-control form-control-modern" type="email" name="Mail" rows="4" required>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="row action-buttons">
+                        <div class="col-12 col-md-auto">
+                            <button type="submit" class="submit-button btn btn-primary btn-px-4 py-3 d-flex align-items-center font-weight-semibold line-height-1" data-loading-text="Loading...">
+                                <i class="bx bx-save text-4 me-2"></i> Gönder
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </section>
+</div>

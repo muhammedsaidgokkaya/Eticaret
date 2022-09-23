@@ -1,0 +1,46 @@
+﻿@model EntityLayer.Concrete.Referanslar
+
+@{
+    ViewData["Title"] = "ReferansDetay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="page-header page-header-modern bg-color-light-scale-1 page-header-md ">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col">
+                <div class="row">
+                    <div class="col-md-12 align-self-center p-static order-2 text-center">
+                        <div class="overflow-hidden pb-2">
+                            <h1 class="text-dark font-weight-bold text-9 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="100">Referanslar</h1>
+                        </div>
+                    </div>
+                    <div class="col-md-12 align-self-center order-1">
+                        <ul class="breadcrumb d-block text-center appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="300">
+                            <li class="active">Ana Sayfa</li>
+                            <li class="active">Referans</li>
+                            <li class="active">@Model.Baslik</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container pt-4 pb-5">
+	<div class="row py-4 mb-2">
+		<div class="col-md-7 order-2">
+			<div class="overflow-hidden pt-3">
+				<h2 class="text-color-dark font-weight-bold text-12 mb-2 pt-0 mt-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="300">@Model.Baslik</h2>
+			</div>
+			<div class="overflow-hidden mb-3">
+			</div>
+			<p class="lead appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="700">@Model.Description</p>
+			<hr class="solid my-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="900">
+			<p class="lead appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="700">@Model.ReferansBilgileri</p>
+		</div>
+		<div class="col-md-5 pt-3 order-md-2 mb-4 mb-lg-0 appear-animation" data-appear-animation="fadeInRightShorter">
+			<img src="~/Resimler/ReferansResim/@Model.ResimYol" class="img-fluid mb-2" alt="">
+		</div>
+	</div>
+</div>

@@ -1,0 +1,126 @@
+﻿@using eticaret.Models
+@model HakkimizdaDto
+
+@{
+    ViewData["Title"] = "HakkimizdaDuzenle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div>
+    <!-- start: sidebar -->
+    <!-- end: sidebar -->
+    <section role="main" class="content-body content-body-modern mt-0">
+        <header class="page-header page-header-left-inline-breadcrumb">
+            <h2 class="font-weight-bold text-6">Hakkımızda Düzenle</h2>
+        </header>
+
+        <!-- start: page -->
+        <form method="post">
+
+            <div class="row">
+                <div class="col">
+                    <section class="card card-modern card-big-info">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-lg-12-9 col-xl-13-7">
+                                    <div class="row">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div hidden class="form-group row align-items-center mb-3">
+                                                    <label class="col-lg-4 col-xl-2 control-label text-lg-end mb-0">id</label>
+                                                    <div class="col-lg-11 col-xl-10">
+                                                        <input type="text" class="form-control form-control-modern" name="Id" value="@Model.Id" required />
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row align-items-center mb-3">
+                                                    <label class="col-lg-4 col-xl-2 control-label text-lg-end mb-0">Başlık</label>
+                                                    <div class="col-lg-11 col-xl-10">
+                                                        <input type="text" class="form-control form-control-modern" name="Baslik" value="@Model.Baslik" required>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row align-items-center mb-3">
+                                                    <label class="col-lg-4 col-xl-2 control-label text-lg-end mb-0">Açıklama</label>
+                                                    <div class="col-lg-11 col-xl-10">
+                                                        <input type="text" class="form-control form-control-modern" name="Description" value="@Model.Description" required>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row align-items-center mb-3">
+                                                    <label class="col-lg-4 col-xl-2 control-label text-lg-end mb-0">Misyonumuz Başlık</label>
+                                                    <div class="col-lg-11 col-xl-10">
+                                                        <input type="text" class="form-control form-control-modern" name="MisyonumuzBaslik" value="@Model.MisyonumuzBaslik" required>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row align-items-center mb-3">
+                                                    <label class="col-lg-4 col-xl-2 control-label text-lg-end mb-0">Misyonumuz Açıklama</label>
+                                                    <div class="col-lg-11 col-xl-10">
+                                                        <input type="text" class="form-control form-control-modern" name="MisyonumuzDescription" value="@Model.MisyonumuzDescription" required>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row align-items-center mb-3">
+                                                    <label class="col-lg-4 col-xl-2 control-label text-lg-end mb-0">Vizyonumuz Başlık</label>
+                                                    <div class="col-lg-11 col-xl-10">
+                                                        <input type="text" class="form-control form-control-modern" name="VizyonBaslik" value="@Model.VizyonBaslik" required>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row align-items-center mb-3">
+                                                    <label class="col-lg-4 col-xl-2 control-label text-lg-end mb-0">Vizyonumuz Açıklama</label>
+                                                    <div class="col-lg-11 col-xl-10">
+                                                        <input type="text" class="form-control form-control-modern" name="VizyonDescription" value="@Model.VizyonDescription" required>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row align-items-center mb-3">
+                                                    <label class="col-lg-4 col-xl-2 control-label text-lg-end mb-0">Neden Biz Başlık</label>
+                                                    <div class="col-lg-11 col-xl-10">
+                                                        <input type="text" class="form-control form-control-modern" name="NedenBizBaslik" value="@Model.NedenBizBaslik" required>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row align-items-center mb-3">
+                                                    <label class="col-lg-4 col-xl-2 control-label text-lg-end mb-0">Neden Biz Açıklama</label>
+                                                    <div class="col-lg-11 col-xl-10">
+                                                        <input type="text" class="form-control form-control-modern" name="NedenBizDescription" value="@Model.NedenBizDescription" required>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row align-items-center mb-3">
+                                                    <label class="col-lg-4 col-xl-2 control-label text-lg-end mb-0">Biz Kimiz Başlık</label>
+                                                    <div class="col-lg-11 col-xl-10">
+                                                        <input type="text" class="form-control form-control-modern" name="BizKimizBaslik" value="@Model.BizKimizBaslik" required>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row align-items-center mb-3">
+                                                    <label class="col-lg-4 col-xl-2 control-label text-lg-end mb-0">Biz Kimiz Açıklama</label>
+                                                    <div class="col-lg-11 col-xl-10">
+                                                        <input type="text" class="form-control form-control-modern" name="BizKimizDescription" value="@Model.BizKimizDescription" required>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row align-items-center mb-3">
+                                                    <label class="col-lg-4 col-xl-2 control-label text-lg-end mb-0">Ekibimiz Başlık</label>
+                                                    <div class="col-lg-11 col-xl-10">
+                                                        <input type="text" class="form-control form-control-modern" name="EkibimizBaslik" value="@Model.EkibimizBaslik" required>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row align-items-center mb-3">
+                                                    <label class="col-lg-4 col-xl-2 control-label text-lg-end mb-0">Ekibimiz Açıklama</label>
+                                                    <div class="col-lg-11 col-xl-10">
+                                                        <input type="text" class="form-control form-control-modern" name="EkibimizDescription" value="@Model.EkibimizDescription" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="row action-buttons">
+                <div class="col-12 col-md-auto">
+                    <button type="submit" class="submit-button btn btn-primary btn-px-4 py-3 d-flex align-items-center font-weight-semibold line-height-1" data-loading-text="Loading...">
+                        Kaydet
+                    </button>
+                </div>
+
+            </div>
+        </form>
+    </section>
+</div>

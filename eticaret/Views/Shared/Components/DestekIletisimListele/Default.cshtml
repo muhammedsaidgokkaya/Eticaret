@@ -1,0 +1,9 @@
+﻿@using EntityLayer.Concrete
+@model List<Iletisim>
+
+<h4 class="pt-5" style="color: #0088cc">Firma <strong style="color: #0088cc">İletişim</strong></h4>
+<ul class="list list-icons list-icons-style-3 mt-2">
+    <li><i class="fas fa-phone top-6"></i> <strong>Telefon: </strong><a href="tel:@ViewBag.Phone">@ViewBag.Phone</a></li>
+    <li><i class="fas fa-phone top-6"></i> <strong>Çağrı Telefonu: </strong><a href="tel:@ViewBag.PhoneCagri">@ViewBag.PhoneCagri</a></li>
+    <li><i class="fas fa-envelope top-6"></i> <strong>Email: </strong><a href="mailto:@ViewBag.Eposta">@ViewBag.Eposta</a></li>
+</ul>

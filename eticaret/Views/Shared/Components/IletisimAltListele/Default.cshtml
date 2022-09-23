@@ -1,0 +1,32 @@
+﻿@using EntityLayer.Concrete
+@model List<Iletisim>
+
+<ul class="list list-unstyled">
+	<li class="pb-1 mb-2">
+		<span class="d-block font-weight-normal line-height-1 text-color-light">ADRES</span>
+		@ViewBag.Adres
+	</li>
+	<li class="pb-1 mb-2">
+		<span class="d-block font-weight-normal line-height-1 text-color-light">TELEFON</span>
+		<a href="tel:@ViewBag.Phone">@ViewBag.Phone</a>
+	</li>
+	<li class="pb-1 mb-2">
+		<span class="d-block font-weight-normal line-height-1 text-color-light">MAİL</span>
+		<a href="mailto:@ViewBag.Eposta">@ViewBag.Eposta</a>
+	</li>
+	<li class="pb-1 mb-2">
+		<span class="d-block font-weight-normal line-height-1 text-color-light">ÇALIŞMA SAATLERİMİZ</span>
+		@ViewBag.Saatler
+	</li>
+</ul>
+<ul class="social-icons social-icons-clean-with-border social-icons-medium">
+	<li class="social-icons-instagram">
+		<a href="@ViewBag.Instagram" class="no-footer-css" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+	</li>
+	<li class="social-icons-twitter mx-2">
+		<a href="@ViewBag.Twitter" class="no-footer-css" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+	</li>
+	<li class="social-icons-facebook">
+		<a href="@ViewBag.Facebook" class="no-footer-css" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+	</li>
+</ul>

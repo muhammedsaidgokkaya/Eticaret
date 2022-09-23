@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<!-- Basic -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	<title>E-TİCARET PROJE</title>
+	
+	<meta name="keywords" content="HTML5 Template" />
+	<meta name="description" content="Porto - Responsive HTML5 Template">
+	<meta name="author" content="okler.net">
+	
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="~/img/favicon.ico" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="~/img/apple-touch-icon.png">
+	
+	<!-- Mobile Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+	
+	<!-- Web Fonts  -->
+	<link id="googleFonts" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800%7CShadows+Into+Light%7CPlayfair+Display:400&display=swap" rel="stylesheet" type="text/css">
+	
+	<!-- Vendor CSS -->
+	<link rel="stylesheet" href="~/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="~/vendor/fontawesome-free/css/all.min.css">
+	<link rel="stylesheet" href="~/vendor/animate/animate.compat.css">
+	<link rel="stylesheet" href="~/vendor/simple-line-icons/css/simple-line-icons.min.css">
+	<link rel="stylesheet" href="~/vendor/owl.carousel/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="~/vendor/owl.carousel/assets/owl.theme.default.min.css">
+	<link rel="stylesheet" href="~/vendor/magnific-popup/magnific-popup.min.css">
+	<link rel="stylesheet" href="~/vendor/bootstrap-star-rating/css/star-rating.min.css">
+	<link rel="stylesheet" href="~/vendor/bootstrap-star-rating/themes/krajee-fas/theme.min.css">
+	
+	<!-- Theme CSS -->
+	<link rel="stylesheet" href="~/css/theme.css">
+	<link rel="stylesheet" href="~/css/theme-elements.css">
+	<link rel="stylesheet" href="~/css/theme-blog.css">
+	<link rel="stylesheet" href="~/css/theme-shop.css">
+
+	<!-- Skin CSS -->
+	<link id="skinCSS" rel="stylesheet" href="~/css/skins/default.css">
+
+	<!-- Theme Custom CSS -->
+	<link rel="stylesheet" href="~/css/custom.css">
+
+	<!-- Head Libs -->
+	<script src="~/vendor/modernizr/modernizr.min.js"></script>
+
+</head>
+<body data-plugin-page-transition>
+
+	<div class="body">
+		<header id="header" data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyStartAt': 135, 'stickySetTop': '-135px', 'stickyChangeLogo': true}">
+			<div class="header-body header-body-bottom-border-fixed box-shadow-none border-top-0">
+				<div class="header-top header-top-small-minheight header-top-simple-border-bottom">
+					<div class="container">
+						<div class="header-row justify-content-between">
+							<div class="header-column justify-content-end col-auto px-0">
+								<div class="header-row">
+									<nav class="header-nav-top">
+										<ul class="header-social-icons social-icons social-icons-clean social-icons-icon-gray">
+											@await Component.InvokeAsync("IletisimUstListele")
+										</ul>
+									</nav>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="header-container container">
+					<div class="header-row py-2">
+						<div class="header-column w-100">
+							<div class="header-row justify-content-between">
+								<div class="header-logo z-index-2 col-lg-2 px-0">
+									<a href="/Home/Index">
+										<img alt="Porto" width="100" height="48" data-sticky-width="82" data-sticky-height="40" data-sticky-top="84" src="~/img/logo-default-slim.png">
+									</a>
+								</div>
+								<div class="header-nav-features header-nav-features-no-border col-lg-5 col-xl-6 px-0 ms-0">
+									<div class="header-nav-feature ps-lg-5 pe-lg-4">
+										<form role="search" action="page-search-results.html" method="get">
+											<div class="search-with-select">
+												<a href="#" class="mobile-search-toggle-btn me-2" data-porto-toggle-class="open">
+													<i class="icons icon-magnifier text-color-dark text-color-hover-primary"></i>
+												</a>
+												<div class="search-form-wrapper input-group">
+													<input class="form-control text-1" id="headerSearch" name="q" type="search" value="" placeholder="Search...">
+													<div class="search-form-select-wrapper">
+														<button class="btn" type="submit">
+															<i class="icons icon-magnifier header-nav-top-icon text-color-dark"></i>
+														</button>
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+								<ul class="header-extra-info col-lg-3 col-xl-2 ps-2 ps-xl-0 ms-lg-3 d-none d-lg-block">
+									<li class="d-none d-sm-inline-flex ms-0">
+										<div class="header-extra-info-icon ms-lg-4">
+											<i class="icons icon-phone text-3 text-color-dark position-relative top-1"></i>
+										</div>
+										<div class="header-extra-info-text">
+											<label class="text-1 font-weight-semibold text-color-default">ŞİMDİ ARA</label>
+											@await Component.InvokeAsync("IletisimCagriListele")
+										</div>
+									</li>
+								</ul>
+								<div class="d-flex col-auto col-lg-2 pe-0 ps-0 ps-xl-3">
+									<ul class="header-extra-info">
+										<li class="me-2 ms-3">
+											<div class="header-extra-info-icon">
+												<a href="/User/Favoriler" class="text-decoration-none text-color-dark text-color-hover-primary text-2">
+													<i class="icons icon-heart"></i>
+												</a>
+											</div>
+										</li>
+									</ul>
+									<ul class="header-extra-info">
+										<li class="me-2 ms-3">
+											<div class="header-extra-info-icon">
+												<a href="/User/Sepetim" class="text-decoration-none text-color-dark text-color-hover-primary text-2">
+													<img src="~/img/icons/icon-cart-big.svg" height="30" alt="" class="header-nav-top-icon-img">
+												</a>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="header-column justify-content-end">
+							<div class="header-row">
+							</div>
+						</div>
+					</div>
+				</div>
+				@*navbar*@
+				<div class="header-nav-bar header-nav-bar-top-border bg-light">
+					<div class="header-container container">
+						<div class="header-row">
+							<div class="header-column">
+								<div class="header-row justify-content-end">
+									<div class="header-nav header-nav-line header-nav-top-line header-nav-top-line-with-border justify-content-start" data-sticky-header-style="{'minResolution': 991}" data-sticky-header-style-active="{'margin-left': '105px'}" data-sticky-header-style-deactive="{'margin-left': '0'}">
+										<div class="header-nav-main header-nav-main-square header-nav-main-dropdown-no-borders header-nav-main-effect-3 header-nav-main-sub-effect-1 w-100">
+											<nav class="collapse w-100">
+												
+												@await Component.InvokeAsync("Menu")
+											
+											</nav>
+										</div>
+										<button class="btn header-btn-collapse-nav" data-bs-toggle="collapse" data-bs-target=".header-nav-main nav">
+											<i class="fas fa-bars"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		@RenderBody()
+
+		<footer id="footer" class="footer-texts-more-lighten">
+			<div class="container">
+				<div class="row py-4 my-5">
+					<div class="col-md-8 col-lg-4 mb-5 mb-lg-0">
+						<h5 class="text-4 text-color-light mb-3">İLETİŞİM</h5>
+						@await Component.InvokeAsync("IletisimAltListele")
+					</div>
+					@await Component.InvokeAsync("FooterListele")
+				</div>
+			</div>
+			<div class="container">
+				<div class="footer-copyright footer-copyright-style-2 pt-4 pb-5">
+					<div class="row align-items-center justify-content-md-between">
+						<div class="col-12 col-md-auto text-center text-md-start mb-2 mb-md-0">
+							<p class="mb-0">Çayluk House © 2021. Tüm Hakları Saklıdır</p>
+						</div>
+						<div class="col-12 col-md-auto">
+							<div class="payment-cc justify-content-center justify-content-md-end">
+								<i class="fab fa-cc-visa"></i>
+								<i class="fab fa-cc-paypal"></i>
+								<i class="fab fa-cc-stripe"></i>
+								<i class="fab fa-cc-mastercard"></i>
+								<i class="fab fa-cc-apple-pay"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<!-- Vendor -->
+	<script src="~/vendor/jquery/jquery.min.js"></script>
+	<script src="~/vendor/jquery.appear/jquery.appear.min.js"></script>
+	<script src="~/vendor/jquery.easing/jquery.easing.min.js"></script>
+	<script src="~/vendor/jquery.cookie/jquery.cookie.min.js"></script>
+	<script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="~/vendor/jquery.validation/jquery.validate.min.js"></script>
+	<script src="~/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
+	<script src="~/vendor/jquery.gmap/jquery.gmap.min.js"></script>
+	<script src="~/vendor/lazysizes/lazysizes.min.js"></script>
+	<script src="~/vendor/isotope/jquery.isotope.min.js"></script>
+	<script src="~/vendor/owl.carousel/owl.carousel.min.js"></script>
+	<script src="~/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+	<script src="~/vendor/vide/jquery.vide.min.js"></script>
+	<script src="~/vendor/vivus/vivus.min.js"></script>
+	<script src="~/vendor/bootstrap-star-rating/js/star-rating.min.js"></script>
+	<script src="~/vendor/bootstrap-star-rating/themes/krajee-fas/theme.min.js"></script>
+	<script src="~/vendor/jquery.countdown/jquery.countdown.min.js"></script>
+	<script src="~/vendor/elevatezoom/jquery.elevatezoom.min.js"></script>
+
+	<!-- Theme Base, Components and Settings -->
+	<script src="~/js/theme.js"></script>
+
+	<!-- Current Page Vendor and Views -->
+	<script src="~/js/views/view.shop.js"></script>
+
+	<!-- Theme Custom -->
+	<script src="~/js/custom.js"></script>
+
+	<!-- Theme Initialization Files -->
+	<script src="~/js/theme.init.js"></script>
+
+	<!-- Examples -->
+	<script src="~/js/examples/examples.gallery.js"></script>
+
+</body>
+</html>

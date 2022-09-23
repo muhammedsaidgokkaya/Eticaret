@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewData["Title"] = "MesajKutusu";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div>
+    <section class="body">
+        <!-- start: header -->
+        <!-- end: header -->
+        <div>
+            <!-- start: sidebar -->
+            <!-- end: sidebar -->
+            <section role="main" class="content-body content-body-modern mt-0">
+                <div class="row">
+                    <div class="col">
+                        <section class="card card-modern card-big-info">
+
+                            <div class="card-body">
+                                <div class="row">
+                                    @await Component.InvokeAsync("UserMesajListele")
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <div class="row">
+                                    @await Component.InvokeAsync("AdminMesajListele")
+                                </div>
+                            </div>
+
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+</div>

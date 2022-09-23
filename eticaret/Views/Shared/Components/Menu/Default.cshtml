@@ -1,0 +1,73 @@
+﻿@model List<EntityLayer.Concrete.Category>
+@{
+    void RenderName(int? parentId)
+    {
+        @foreach (var item in @Model.Where(x => x.ParentId == parentId).ToList())
+        {
+            if (parentId == null)
+            {
+                <li class="dropdown">
+                    <a class="dropdown-item dropdown-toggle">@item.CategoryBaslik</a>
+                </li>
+            }
+            else
+            {
+                <ul class="dropdown-menu">
+                    <li class="dropdown">
+                        <a class="dropdown-item">@item.CategoryBaslik</a>
+                    </li>
+                </ul>
+            }
+            if (Model.Where(x => x.ParentId == item.Id).Count() > 0)
+            {
+                RenderName(item.Id);
+            }
+        }
+    }
+}
+
+<ul class="nav nav-pills w-100" id="mainNav">
+    <li class="dropdown">
+        <a class="dropdown-item dropdown-toggle" href="~/Home/Index">
+            Ana Sayfa
+        </a>
+        <ul class="dropdown-menu">
+            <li>
+                <a class="dropdown-item" href="~/Home/Hakkimizda">
+                    Hakkımızda
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="~/Home/Iletisim">
+                    İletişim
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="~/Home/Referanslar">
+                    Referanslar
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="~/Home/DestekPortali">
+                    Destek Portalı
+                </a>
+            </li>
+        </ul>
+    </li>
+
+    @{
+        RenderName(null);
+    }
+
+    <li class="dropdown ms-lg-auto">
+        <a href="/Giris/Index" class="dropdown-item">
+            GİRİŞ YAP
+        </a>
+    </li>
+
+    <li class="dropdown">
+        <a href="/Kayit/Index" class="dropdown-item">
+            KAYIT OL
+        </a>
+    </li>
+</ul>

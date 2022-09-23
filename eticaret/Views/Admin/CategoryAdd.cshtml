@@ -1,0 +1,82 @@
+﻿@using EntityLayer.Concrete
+@model Category
+
+@{
+    ViewData["Title"] = "AltCategoryAdd";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div>
+    <section class="body">
+        <!-- start: header -->
+        <!-- end: header -->
+        <div>
+            <!-- start: sidebar -->
+            <!-- end: sidebar -->
+            <section role="main" class="content-body content-body-modern mt-0">
+                <div class="row">
+                    <div class="col">
+                        <section class="card card-modern card-big-info">
+                            <div class="card-body">
+                                <div class="row">
+                                    @await Component.InvokeAsync("CategoryListele")
+                                </div>
+                            </div>
+
+                        </section>
+                    </div>
+                </div>
+                <!-- start: page -->
+                <form class="ecommerce-form action-buttons-fixed" action="#" method="post" enctype="multipart/form-data">
+                    <div class="gizgos" style="display:none;">
+                        <div class="row">
+                            <div class="col">
+                                <section class="card card-modern card-big-info">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-lg-12-9 col-xl-13-7">
+                                                <div class="row">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <div class="form-group row align-items-center mb-3">
+                                                                <label class="col-lg-5 col-xl-3 control-label text-lg-end mb-0">Kategori İsmi</label>
+                                                                <div class="col-lg-7 col-xl-6">
+                                                                    <input class="form-control form-control-modern" name="CategoryBaslik" value="" required>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row align-items-center mb-3">
+                                                                <label class="col-lg-5 col-xl-3 control-label text-lg-end mb-0">Kategori Açıklaması</label>
+                                                                <div class="col-lg-7 col-xl-6">
+                                                                    <input class="form-control form-control-modern" name="CategoryDescription" rows="4">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="row action-buttons">
+                            <div class="col-12 col-md-auto">
+                                <button type="submit" class="submit-button btn btn-primary btn-px-4 py-3 d-flex align-items-center font-weight-semibold line-height-1" data-loading-text="Loading...">
+                                    <i class="bx bx-save text-4 me-2"></i> Kaydet
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        $(document).ready(function () {
+                            $("#hideshow").click(function () {
+                                $(".gizgos").slideToggle("slow")
+                            });
+
+                        });
+                    </script>
+                </form>
+            </section>
+        </div>
+    </section>
+</div>
