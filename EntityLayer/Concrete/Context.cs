@@ -12,7 +12,6 @@ namespace EntityLayer.Concrete
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-
             optionsBuilder.UseMySQL("server=localhost;username=root;password=sonel.1234;database=eticaret;port=3306");
         }
         public DbSet<Iletisim> Iletisims { get; set; }
